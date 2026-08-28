@@ -32,10 +32,11 @@
                 </div>
             </div>
 
+            <!-- Güncellenen MSN Durum Kutusu -->
             <div class="window-box">
-                <div class="window-title">MSN Ne Dinliyor?</div>
+                <div class="window-title">MSN Kişisel İleti</div>
                 <div class="window-body" onclick="muzikDegistir()" style="cursor: pointer;">
-                    <p style="font-size:11px; color:#003399;">🎵 <b id="now-playing">Barış Manço - Arkadaşım Eşek</b></p>
+                    <p style="font-size:11px; color:#003399;">💬 <b id="now-playing">Basit Oyunlar, Büyük Eğlenceler!</b></p>
                     <small style="color:#777; font-size:9px;">(Değiştirmek için tıkla)</small>
                 </div>
             </div>
@@ -60,16 +61,16 @@
     </div>
 
     <script>
-        const muzikler = [
-            "Barış Manço - Arkadaşım Eşek",
-            "Cem Karaca - Tamirci Çırağı",
-            "Sezen Aksu - Firuze",
-            "Kayahan - Mor Menekşe"
+        const durumlar = [
+            "Basit Oyunlar, Büyük Eğlenceler!",
+            "Kodlar yazılıyor, oyunlar yükleniyor...",
+            "2000'ler ruhu burada yaşıyor!",
+            "Şeftali Studio sundu."
         ];
         let mIndex = 0;
         function muzikDegistir() {
-            mIndex = (mIndex + 1) % muzikler.length;
-            document.getElementById("now-playing").innerText = muzikler[mIndex];
+            mIndex = (mIndex + 1) % durumlar.length;
+            document.getElementById("now-playing").innerText = durumlar[mIndex];
         }
         function sysInfo() {
             alert("🖥️ STÜDYO SİSTEM BİLGİSİ:\n- Motor: Scratch / Unity 3D\n- Tema: Frutiger Aero 2000s\n- İşlemci: Şeftali Core i9\n- Durum: %100 Hazır!");
