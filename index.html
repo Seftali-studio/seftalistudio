@@ -10,7 +10,10 @@
 
     <!-- Üst MSN Messenger Tarzı Başlık Bantı -->
     <div id="msn-bar">
-        <span class="msn-status"><span class="status-icon online"></span> Şeftali Studio (Çevrimiçi) - "Yeni oyunlar yükleniyor..."</span>
+        <span class="msn-status" id="msn-status-btn" onclick="durumDegistir()" style="cursor: pointer;">
+            <span class="status-icon online" id="status-dot"></span> 
+            <span id="status-text">Şeftali Studio (Çevrimiçi) - "Yeni oyunlar yükleniyor..."</span>
+        </span>
         <button id="nudge-btn" onclick="titret()">TİTRET! (Nudge)</button>
     </div>
 
@@ -21,7 +24,7 @@
                 <div class="window-title">Profil / Avatar</div>
                 <div class="window-body">
                     <div class="avatar-frame">
-                        <img src="logo.jpg" alt="Logo" id="profile-pic">
+                        <img src="logo.jpg" alt="Şeftali Studio Logo" id="profile-pic">
                     </div>
                     <p class="user-name">Şeftali_Studio_2000</p>
                     <p class="user-bio">&lt;3 Oyun Geliştirme Stüdyosu &lt;3</p>
@@ -46,7 +49,7 @@
                 <div class="window-title">
                     <span>Aramıza Hoş Geldin!</span>
                     <div class="win-controls">
-                        <span>_</span><span>□</span><span class="close-btn">X</span>
+                        <span>_</span><span>□</span><span class="close-btn" onclick="pencereKapat()">X</span>
                     </div>
                 </div>
                 <div class="window-body">
@@ -74,13 +77,23 @@
 
     <!-- Ziyaretçi Sayacı ve Alt Bilgi -->
     <footer>
-        <div class="visitor-counter">
-            <span>Ziyaretçi Sayısı: </span>
-            <span class="counter-digits">004289</span>
+        <div class="social-links" style="margin-bottom: 10px;">
+            <a href="https://www.facebook.com/Seftalistudio" target="_blank" style="color: white; margin: 0 10px; font-weight: bold;">Facebook</a>
+            <a href="https://www.instagram.com/seftali_studio/" target="_blank" style="color: white; margin: 0 10px; font-weight: bold;">Instagram</a>
         </div>
-        <p>© 2000-2026 Şeftali Studio. Tüm Hakları Saklıdır.</p>
+
+        <div class="visitor-counter" onclick="sayaçArttir()" style="cursor: pointer;" title="Tıkla ve sayacı uçur!">
+            <span>Ziyaretçi Sayısı: </span>
+            <span class="counter-digits" id="counter">004289</span>
+        </div>
+
+        <p class="credits" style="margin-top: 15px; font-size: 11px; color: #e1f0ff;">
+            Character designs are inspired by <a href="https://scratch.mit.edu" target="_blank" style="color: #fff; text-decoration: underline;">Scratch (MIT Media Lab)</a>. 
+            Reimagined in 3D for Şeftali Studio projects.
+        </p>
+
         <!-- Easter Egg: Clippy -->
-        <div id="clippy" onclick="clippyKonus()">📎</div>
+        <div id="clippy" onclick="clippyKonus()" title="Clippy'ye tıkla!">📎</div>
     </footer>
 
     <script>
@@ -93,6 +106,34 @@
         // Clippy Easter Egg'i
         function clippyKonus() {
             alert("Clippy: Görünüşe göre 2000'ler tarzı harika bir site yapıyorsun! Yardıma ihtiyacın var mı?");
+        }
+
+        // Pencere Kapatma Easter Egg'i
+        function pencereKapat() {
+            alert("Hata 404: Bu pencere kapatılamaz! 2000'ler ruhunda kalmaya mecbursun :)");
+        }
+
+        // Ziyaretçi Sayacı Easter Egg'i
+        let sayac = 4289;
+        function sayaçArttir() {
+            sayac += 100;
+            document.getElementById("counter").innerText = String(sayac).padStart(6, '0');
+        }
+
+        // MSN Durum Değiştirme Easter Egg'i
+        let online = true;
+        function durumDegistir() {
+            const dot = document.getElementById("status-dot");
+            const text = document.getElementById("status-text");
+            if (online) {
+                dot.style.backgroundColor = "#ff0000";
+                text.innerText = "Şeftali Studio (Meşgul) - 'Oyun kodlanıyor, rahatsız etmeyin!'";
+                online = false;
+            } else {
+                dot.style.backgroundColor = "#39ff14";
+                text.innerText = "Şeftali Studio (Çevrimiçi) - 'Yeni oyunlar yükleniyor...'";
+                online = true;
+            }
         }
     </script>
 </body>
