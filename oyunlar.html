@@ -31,13 +31,43 @@
                     <h2>🎮 Projelerimiz</h2>
                     <p>Scratch ve Unity altyapısıyla geliştirdiğimiz retro ve eğlenceli oyunlar çok yakında burada oynanabilir olacak!</p>
                     <hr class="aero-hr">
+                    
                     <div class="news-card">
                         <h3>🕹️ Yakında Gelecek İlk Oyun!</h3>
                         <p>Scratch dünyasından ilham alan 3D macera oyunumuz yapım aşamasında.</p>
                     </div>
+
+                    <br>
+                    <!-- Easter Egg Alanı -->
+                    <div style="text-align: center; margin-top: 15px;">
+                        <button class="aero-btn" onclick="oyunBaslat()" style="cursor: pointer; width: 100%; background: #008000; color: white;">
+                            👾 GİZLİ RETRO OYUNU BAŞLAT 👾
+                        </button>
+                        <div id="secret-game" style="display:none; margin-top:10px; background:#000; color:#00ff00; padding:15px; font-family:monospace; border:2px solid #00ff00;">
+                            <p>=== ŞEFTALİ RETRO ARCADE ===</p>
+                            <p>Skor: <span id="game-score">0</span></p>
+                            <button onclick="skorArtir()" style="background:#00ff00; color:#000; font-weight:bold; cursor:pointer;">JETON YÜKLE / TIKLA!</button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </main>
     </div>
+
+    <script>
+        let score = 0;
+        function oyunBaslat() {
+            const box = document.getElementById("secret-game");
+            box.style.display = box.style.display === "none" ? "block" : "none";
+        }
+        function skorArtir() {
+            score += 10;
+            document.getElementById("game-score").innerText = score;
+            if(score === 100) {
+                alert("🎉 TEBRİKLER! 2000'ler Retro Şampiyonu Oldun!");
+            }
+        }
+    </script>
 </body>
 </html>
