@@ -22,13 +22,23 @@
                     <a href="hakkimizda.html" class="aero-btn">💬 Hakkımızda</a>
                 </div>
             </div>
+
+            <!-- Easter Egg: Winamp Player -->
+            <div class="window-box">
+                <div class="window-title">Winamp v2.91</div>
+                <div class="window-body" style="background: #111; color: #00ff00; font-family: monospace; font-size: 11px;">
+                    <p>🎵 <span id="song-title">1. Barış Manço - Dönence.mp3</span></p>
+                    <button onclick="sarkiDegistir()" style="background:#333; color:#fff; border:1px solid #777; cursor:pointer; width:100%; margin-top:5px;">NEXT ⏭</button>
+                </div>
+            </div>
         </aside>
 
         <main class="content">
             <div class="window-box">
                 <div class="window-title">Haber Akışı</div>
                 <div class="window-body">
-                    <h2>📰 Son Gelişmeler</h2>
+                    <h2 onclick="flasHaber()" style="cursor: pointer;" title="Tıkla ve Son Dakika Haberini Oku!">📰 Son Gelişmeler (Tıkla! ⚡)</h2>
+                    
                     <div class="news-card">
                         <h3>🌐 Web Sitemiz Yenilendi!</h3>
                         <small>28 Ağustos 2026</small>
@@ -38,5 +48,23 @@
             </div>
         </main>
     </div>
+
+    <script>
+        function flasHaber() {
+            alert("🚨 FLAŞ HABER (2000'ler ÖZEL): Şeftali Studio yeni oyun projesi için gizli çalışmalarını sürdürüyor!");
+        }
+
+        const sarkilar = [
+            "1. Barış Manço - Dönence.mp3",
+            "2. Cem Karaca - Ceviz Ağacı.mp3",
+            "3. Sagopa Kajmer - Mesela Yani.mp3",
+            "4. Gülden Karaböcek - Dilek Taşı.mp3"
+        ];
+        let sarkiIndex = 0;
+        function sarkiDegistir() {
+            sarkiIndex = (sarkiIndex + 1) % sarkilar.length;
+            document.getElementById("song-title").innerText = sarkilar[sarkiIndex];
+        }
+    </script>
 </body>
 </html>
