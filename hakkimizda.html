@@ -14,6 +14,15 @@
     <div class="main-container">
         <aside class="sidebar">
             <div class="window-box">
+                <div class="window-title">Profil / Avatar</div>
+                <div class="window-body">
+                    <div class="avatar-frame">
+                        <img src="logo.jpg" alt="Şeftali Studio Logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="window-box">
                 <div class="window-title">Bağlantılar</div>
                 <div class="window-body navigation">
                     <a href="index.html" class="aero-btn">🏠 Ana Sayfa</a>
@@ -23,7 +32,6 @@
                 </div>
             </div>
 
-            <!-- Easter Egg: MSN Listening To -->
             <div class="window-box">
                 <div class="window-title">MSN Ne Dinliyor?</div>
                 <div class="window-body" onclick="muzikDegistir()" style="cursor: pointer;">
@@ -63,7 +71,6 @@
             mIndex = (mIndex + 1) % muzikler.length;
             document.getElementById("now-playing").innerText = muzikler[mIndex];
         }
-
         function sysInfo() {
             alert("🖥️ STÜDYO SİSTEM BİLGİSİ:\n- Motor: Scratch / Unity 3D\n- Tema: Frutiger Aero 2000s\n- İşlemci: Şeftali Core i9\n- Durum: %100 Hazır!");
         }
