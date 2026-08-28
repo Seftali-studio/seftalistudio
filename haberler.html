@@ -32,11 +32,12 @@
                 </div>
             </div>
 
+            <!-- Güncellenen Durum Paneli -->
             <div class="window-box">
-                <div class="window-title">Winamp v2.91</div>
+                <div class="window-title">Stüdyo Notları</div>
                 <div class="window-body" style="background: #111; color: #00ff00; font-family: monospace; font-size: 11px;">
-                    <p>🎵 <span id="song-title">1. Barış Manço - Dönence.mp3</span></p>
-                    <button onclick="sarkiDegistir()" style="background:#333; color:#fff; border:1px solid #777; cursor:pointer; width:100%; margin-top:5px;">NEXT ⏭</button>
+                    <p>📌 <span id="song-title">1. Proje geliştirme devam ediyor...</span></p>
+                    <button onclick="sarkiDegistir()" style="background:#333; color:#fff; border:1px solid #777; cursor:pointer; width:100%; margin-top:5px;">SONRAKİ NOT ⏭</button>
                 </div>
             </div>
         </aside>
@@ -61,16 +62,17 @@
         function flasHaber() {
             alert("🚨 FLAŞ HABER (2000'ler ÖZEL): Şeftali Studio yeni oyun projesi için gizli çalışmalarını sürdürüyor!");
         }
-        const sarkilar = [
-            "1. Barış Manço - Dönence.mp3",
-            "2. Cem Karaca - Ceviz Ağacı.mp3",
-            "3. Sagopa Kajmer - Mesela Yani.mp3",
-            "4. Gülden Karaböcek - Dilek Taşı.mp3"
+        
+        const duyurular = [
+            "1. Proje geliştirme devam ediyor...",
+            "2. Yeni güncellemeler pek yakında!",
+            "3. Retro tema çalışmaları tamamlandı.",
+            "4. Şeftali Studio ekibi iş başında!"
         ];
-        let sarkiIndex = 0;
+        let dIndex = 0;
         function sarkiDegistir() {
-            sarkiIndex = (sarkiIndex + 1) % sarkilar.length;
-            document.getElementById("song-title").innerText = sarkilar[sarkiIndex];
+            dIndex = (dIndex + 1) % duyurular.length;
+            document.getElementById("song-title").innerText = duyurular[dIndex];
         }
     </script>
 </body>
