@@ -1,0 +1,215 @@
+/* 2000'ler Temel Arka Plan ve Font Yapısı */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Tahoma", "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #0055ff 0%, #00d4ff 50%, #55efc4 100%);
+    background-attachment: fixed;
+    color: #000;
+}
+
+/* MSN Başlık Çubuğu */
+#msn-bar {
+    background: linear-gradient(to bottom, #e1f0ff, #b8d9ff);
+    border-bottom: 2px solid #7092be;
+    padding: 6px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.status-icon.online {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #39ff14;
+    border-radius: 50%;
+    border: 1px solid #008000;
+}
+
+#nudge-btn {
+    background: linear-gradient(to bottom, #ff9999, #cc0000);
+    color: white;
+    border: 1px solid #800000;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 2px 8px;
+    font-size: 11px;
+}
+
+#nudge-btn:hover {
+    background: linear-gradient(to bottom, #ff3333, #990000);
+}
+
+/* Sayfa Düzeni */
+.main-container {
+    display: flex;
+    max-width: 950px;
+    margin: 20px auto;
+    gap: 15px;
+    padding: 0 10px;
+}
+
+.sidebar {
+    width: 250px;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Windows XP / Aero Pencere Tasarımı */
+.window-box {
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid #0055ea;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    margin-bottom: 15px;
+    backdrop-filter: blur(4px);
+}
+
+.window-title {
+    background: linear-gradient(to right, #0058e6, #2796ff, #0058e6);
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.win-controls span {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.window-body {
+    padding: 12px;
+}
+
+/* Avatar ve Profil */
+.avatar-frame {
+    border: 3px solid #b2d8ff;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-name {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 8px;
+    color: #003399;
+}
+
+.user-bio {
+    text-align: center;
+    font-size: 11px;
+    color: #555;
+}
+
+/* Aero Butonlar */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.aero-btn {
+    display: block;
+    padding: 8px;
+    background: linear-gradient(to bottom, #ffffff, #e6f2ff);
+    border: 1px solid #7092be;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #003399;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 0 1px 0 #fff;
+    box-shadow: inset 0 1px 0 #fff;
+    transition: all 0.2s;
+}
+
+.aero-btn:hover {
+    background: linear-gradient(to bottom, #e6f2ff, #b3d8ff);
+    border-color: #0055ea;
+}
+
+/* Kayan Yazı ve İçerik */
+.marquee-container {
+    background: #ffffcc;
+    border: 1px solid #e6e600;
+    padding: 4px;
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+.aero-hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,85,234,0.75), rgba(0,0,0,0));
+    margin: 15px 0;
+}
+
+.news-card {
+    background: #f0f7ff;
+    border: 1px solid #b3d8ff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Footer ve Clippy Easter Egg */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 11px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.counter-digits {
+    background: #000;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    padding: 2px 6px;
+    border: 1px solid #fff;
+}
+
+#clippy {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    animation: float 2s infinite ease-in-out;
+}
+
+/* Titreşim ve Animasyonlar */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.shake {
+    animation: shakeAnim 0.1s infinite;
+}
+
+@keyframes shakeAnim {
+    0% { transform: translate(3px, 3px); }
+    20% { transform: translate(-3px, -3px); }
+    40% { transform: translate(3px, -3px); }
+    60% { transform: translate(-3px, 3px); }
+    80% { transform: translate(3px, 3px); }
+    100% { transform: translate(0, 0); }
+}
