@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- Üst MSN Messenger Tarzı Başlık Bantı -->
     <div id="msn-bar">
         <span class="msn-status" id="msn-status-btn" onclick="durumDegistir()" style="cursor: pointer;">
             <span class="status-icon online" id="status-dot"></span> 
@@ -18,7 +17,6 @@
     </div>
 
     <div class="main-container">
-        <!-- Sol Menü / Profil Alanı -->
         <aside class="sidebar">
             <div class="window-box">
                 <div class="window-title">Profil / Avatar</div>
@@ -31,7 +29,6 @@
                 </div>
             </div>
 
-            <!-- Gezinme Menüsü -->
             <div class="window-box">
                 <div class="window-title">Bağlantılar</div>
                 <div class="window-body navigation">
@@ -43,7 +40,6 @@
             </div>
         </aside>
 
-        <!-- Ana İçerik Alanı -->
         <main class="content">
             <div class="window-box main-window">
                 <div class="window-title">
@@ -75,7 +71,6 @@
         </main>
     </div>
 
-    <!-- Ziyaretçi Sayacı ve Alt Bilgi -->
     <footer>
         <div class="social-links" style="margin-bottom: 10px;">
             <a href="https://www.facebook.com/Seftalistudio" target="_blank" style="color: white; margin: 0 10px; font-weight: bold;">Facebook</a>
@@ -92,35 +87,25 @@
             Reimagined in 3D for Şeftali Studio projects.
         </p>
 
-        <!-- Easter Egg: Clippy -->
         <div id="clippy" onclick="clippyKonus()" title="Clippy'ye tıkla!">📎</div>
     </footer>
 
     <script>
-        // MSN Titreşim Easter Egg'i
         function titret() {
             document.body.classList.add("shake");
             setTimeout(() => { document.body.classList.remove("shake"); }, 500);
         }
-
-        // Clippy Easter Egg'i
         function clippyKonus() {
             alert("Clippy: Görünüşe göre 2000'ler tarzı harika bir site yapıyorsun! Yardıma ihtiyacın var mı?");
         }
-
-        // Pencere Kapatma Easter Egg'i
         function pencereKapat() {
             alert("Hata 404: Bu pencere kapatılamaz! 2000'ler ruhunda kalmaya mecbursun :)");
         }
-
-        // Ziyaretçi Sayacı Easter Egg'i
         let sayac = 4289;
         function sayaçArttir() {
             sayac += 100;
             document.getElementById("counter").innerText = String(sayac).padStart(6, '0');
         }
-
-        // MSN Durum Değiştirme Easter Egg'i
         let online = true;
         function durumDegistir() {
             const dot = document.getElementById("status-dot");
