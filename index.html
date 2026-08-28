@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şeftali Studio - Hoş Geldiniz! [MSN Edition]</title>
+    <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+    <!-- Üst MSN Messenger Tarzı Başlık Bantı -->
+    <div id="msn-bar">
+        <span class="msn-status"><span class="status-icon online"></span> Şeftali Studio (Çevrimiçi) - "Yeni oyunlar yükleniyor..."</span>
+        <button id="nudge-btn" onclick="titret()">TİTRET! (Nudge)</button>
+    </div>
+
+    <div class="main-container">
+        <!-- Sol Menü / Profil Alanı -->
+        <aside class="sidebar">
+            <div class="window-box">
+                <div class="window-title">Profil / Avatar</div>
+                <div class="window-body">
+                    <div class="avatar-frame">
+                        <img src="logo.jpg" alt="Logo" id="profile-pic">
+                    </div>
+                    <p class="user-name">Şeftali_Studio_2000</p>
+                    <p class="user-bio">&lt;3 Oyun Geliştirme Stüdyosu &lt;3</p>
+                </div>
+            </div>
+
+            <!-- Gezinme Menüsü -->
+            <div class="window-box">
+                <div class="window-title">Bağlantılar</div>
+                <div class="window-body navigation">
+                    <a href="index.html" class="aero-btn">🏠 Ana Sayfa</a>
+                    <a href="oyunlar.html" class="aero-btn">🎮 Oyunlarımız</a>
+                    <a href="haberler.html" class="aero-btn">📰 Haberler</a>
+                    <a href="hakkimizda.html" class="aero-btn">💬 Hakkımızda</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Ana İçerik Alanı -->
+        <main class="content">
+            <div class="window-box main-window">
+                <div class="window-title">
+                    <span>Aramıza Hoş Geldin!</span>
+                    <div class="win-controls">
+                        <span>_</span><span>□</span><span class="close-btn">X</span>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <h1 class="glow-text">Basit Oyunlar, Büyük Eğlenceler!</h1>
+                    <p class="welcome-text">2000'lerin efsanevi internet atmosferine hoş geldiniz. En renkli oyunlar ve güncellemeler burada!</p>
+                    
+                    <div class="marquee-container">
+                        <marquee behavior="scroll" direction="left">
+                            🔥 DİKKAT: Şeftali Studio yeni projeleriyle çok yakında sizlerle! Sakın ayrılmayın! 🔥
+                        </marquee>
+                    </div>
+
+                    <hr class="aero-hr">
+
+                    <h2>Etkinlikler & Duyurular</h2>
+                    <div class="news-card">
+                        <h3>📌 Yeni Web Sitemiz Yayında!</h3>
+                        <small>Tarih: 28.08.2026</small>
+                        <p>2000'ler retro tarzındaki yeni sitemizle karşınızdayız. MSN sesleri ve easter egg'leri keşfetmeyi unutmayın!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Ziyaretçi Sayacı ve Alt Bilgi -->
+    <footer>
+        <div class="visitor-counter">
+            <span>Ziyaretçi Sayısı: </span>
+            <span class="counter-digits">004289</span>
+        </div>
+        <p>© 2000-2026 Şeftali Studio. Tüm Hakları Saklıdır.</p>
+        <!-- Easter Egg: Clippy -->
+        <div id="clippy" onclick="clippyKonus()">📎</div>
+    </footer>
+
+    <script>
+        // MSN Titreşim Easter Egg'i
+        function titret() {
+            document.body.classList.add("shake");
+            setTimeout(() => { document.body.classList.remove("shake"); }, 500);
+        }
+
+        // Clippy Easter Egg'i
+        function clippyKonus() {
+            alert("Clippy: Görünüşe göre 2000'ler tarzı harika bir site yapıyorsun! Yardıma ihtiyacın var mı?");
+        }
+    </script>
+</body>
+</html>
