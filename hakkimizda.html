@@ -22,6 +22,15 @@
                     <a href="hakkimizda.html" class="aero-btn">💬 Hakkımızda</a>
                 </div>
             </div>
+
+            <!-- Easter Egg: MSN Listening To -->
+            <div class="window-box">
+                <div class="window-title">MSN Ne Dinliyor?</div>
+                <div class="window-body" onclick="muzikDegistir()" style="cursor: pointer;">
+                    <p style="font-size:11px; color:#003399;">🎵 <b id="now-playing">Barış Manço - Arkadaşım Eşek</b></p>
+                    <small style="color:#777; font-size:9px;">(Değiştirmek için tıkla)</small>
+                </div>
+            </div>
         </aside>
 
         <main class="content">
@@ -32,9 +41,32 @@
                     <p>Şeftali Studio, basit oyunlar ve büyük eğlenceler üretmek amacıyla kurulmuş bağımsız bir oyun geliştirme stüdyosudur.</p>
                     <hr class="aero-hr">
                     <p><strong>Vizyonumuz:</strong> Retro ruhu modern oyun dinamikleriyle birleştirerek oyunculara keyifli anlar sunmak.</p>
+                    
+                    <br>
+                    <p style="font-size:11px; color:#888; text-align:right; cursor:pointer;" onclick="sysInfo()">
+                        <u>[Sistem Özelliklerini Görüntüle v2.0]</u>
+                    </p>
                 </div>
             </div>
         </main>
     </div>
+
+    <script>
+        const muzikler = [
+            "Barış Manço - Arkadaşım Eşek",
+            "Cem Karaca - Tamirci Çırağı",
+            "Sezen Aksu - Firuze",
+            "Kayahan - Mor Menekşe"
+        ];
+        let mIndex = 0;
+        function muzikDegistir() {
+            mIndex = (mIndex + 1) % muzikler.length;
+            document.getElementById("now-playing").innerText = muzikler[mIndex];
+        }
+
+        function sysInfo() {
+            alert("🖥️ STÜDYO SİSTEM BİLGİSİ:\n- Motor: Scratch / Unity 3D\n- Tema: Frutiger Aero 2000s\n- İşlemci: Şeftali Core i9\n- Durum: %100 Hazır!");
+        }
+    </script>
 </body>
 </html>
