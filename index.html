@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Şeftali Studio - Hoş Geldiniz! [MSN Edition]</title>
+    <title>Tomato Studio - Hoş Geldiniz! [MSN Edition]</title>
     <link rel="stylesheet" href="stil.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <div id="msn-bar">
         <span class="msn-status" id="msn-status-btn" onclick="durumDegistir()" style="cursor: pointer;">
             <span class="status-icon online" id="status-dot"></span> 
-            <span id="status-text">Şeftali Studio (Çevrimiçi) - "Yeni oyunlar yükleniyor..."</span>
+            <span id="status-text">Tomato Studio (Çevrimiçi) - "Yeni oyunlar yükleniyor..."</span>
         </span>
         <button id="nudge-btn" onclick="titret()">TİTRET! (Nudge)</button>
     </div>
@@ -22,9 +22,9 @@
                 <div class="window-title">Profil / Avatar</div>
                 <div class="window-body">
                     <div class="avatar-frame">
-                        <img src="logo.jpg" alt="Şeftali Studio Logo" id="profile-pic">
+                        <img src="logo.jpg" alt="Tomato Studio Logo" id="profile-pic">
                     </div>
-                    <p class="user-name">Şeftali_Studio_2000</p>
+                    <p class="user-name">Tomato_Studio_2000</p>
                     <p class="user-bio">&lt;3 Oyun Geliştirme Stüdyosu &lt;3</p>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                     
                     <div class="marquee-container">
                         <marquee behavior="scroll" direction="left">
-                            🔥 DİKKAT: Şeftali Studio yeni projeleriyle çok yakında sizlerle! Sakın ayrılmayın! 🔥
+                            🔥 DİKKAT: Tomato Studio yeni projeleriyle çok yakında sizlerle! Sakın ayrılmayın! 🔥
                         </marquee>
                     </div>
 
@@ -62,9 +62,9 @@
 
                     <h2>Etkinlikler & Duyurular</h2>
                     <div class="news-card">
-                        <h3>📌 Yeni Web Sitemiz Yayında!</h3>
+                        <h3>📌 Yenilendik: Tomato Studio Yayında!</h3>
                         <small>Tarih: 28.08.2026</small>
-                        <p>2000'ler retro tarzındaki yeni sitemizle karşınızdayız. MSN sesleri ve easter egg'leri keşfetmeyi unutmayın!</p>
+                        <p>2000'ler retro tarzındaki yeni sitemiz ve kimliğimizle karşınızdayız. MSN sesleri ve easter egg'leri keşfetmeyi unutmayın!</p>
                     </div>
                 </div>
             </div>
@@ -84,7 +84,7 @@
 
         <p class="credits" style="margin-top: 15px; font-size: 11px; color: #e1f0ff;">
             Character designs are inspired by <a href="https://scratch.mit.edu" target="_blank" style="color: #fff; text-decoration: underline;">Scratch (MIT Media Lab)</a>. 
-            Reimagined in 3D for Şeftali Studio projects.
+            Reimagined in 3D for Tomato Studio projects.
         </p>
 
         <div id="clippy" onclick="clippyKonus()" title="Clippy'ye tıkla!">📎</div>
@@ -96,7 +96,7 @@
             setTimeout(() => { document.body.classList.remove("shake"); }, 500);
         }
         function clippyKonus() {
-            alert("Clippy: Görünüşe göre 2000'ler tarzı harika bir site yapıyorsun! Yardıma ihtiyacın var mı?");
+            alert("Clippy: Tomato Studio'nun 2000'ler tarzı yeni sitesine hoş geldin!");
         }
         function pencereKapat() {
             alert("Hata 404: Bu pencere kapatılamaz! 2000'ler ruhunda kalmaya mecbursun :)");
@@ -112,11 +112,11 @@
             const text = document.getElementById("status-text");
             if (online) {
                 dot.style.backgroundColor = "#ff0000";
-                text.innerText = "Şeftali Studio (Meşgul) - 'Oyun kodlanıyor, rahatsız etmeyin!'";
+                text.innerText = "Tomato Studio (Meşgul) - 'Oyun kodlanıyor, rahatsız etmeyin!'";
                 online = false;
             } else {
                 dot.style.backgroundColor = "#39ff14";
-                text.innerText = "Şeftali Studio (Çevrimiçi) - 'Yeni oyunlar yükleniyor...'";
+                text.innerText = "Tomato Studio (Çevrimiçi) - 'Yeni oyunlar yükleniyor...'";
                 online = true;
             }
         }
